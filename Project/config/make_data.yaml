@@ -1,0 +1,14 @@
+make_data:
+  data_path: /home/nkmur/lab/sl_rl/0206/MARLClassification/resources/downloaded/mnist_png/all_png
+  save_path: /home/nkmur/lab/sl_rl/data/mnist/all_png
+  # model
+  repo_or_dir: facebookresearch/dino:main
+  model_name: dino_vitb8
+
+  # processing
+  batch_size: 128
+  patch_size: 8
+  image_size: 224
+  threshold: 0
+  is_patch: True
+  num_heads: 12

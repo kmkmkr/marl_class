@@ -1,0 +1,4 @@
+# action == f, not use error reward
+# python -m marl_classification -a 16 --step 5 --cuda --run-id train_mnist train --action [[8,0],[-8,0],[0,8],[0,-8]] --img-size 224 --nb-class 10 -d 2 --f 8 --ft-extr mnist --nb 64 --na 64 --nm 16 --nd 8 --nlb 96 --nla 96 --batch-size 256 --lr 1e-3 --nb-epoch 40 -o ./out/mnist_actor_critic --use_attn_reward --attn_reward_path /home/nkmur/lab/sl_rl/data/mnist/all_png/data.pkl
+
+python -m marl_classification -a 16 --step 5 --cuda --run-id train_mnist train --action [[8,0],[-8,0],[0,8],[0,-8]] --img-size 224 --nb-class 10 -d 2 --f 8 --ft-extr mnist --nb 64 --na 64 --nm 16 --nd 8 --nlb 96 --nla 96 --batch-size 256 --lr 1e-3 --nb-epoch 40 -o ./out/mnist_actor_critic --use_error_reward
